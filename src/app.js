@@ -53,7 +53,7 @@ app.get('/about',(req,res)=>{
 app.get('/help',(req,res)=>{
     res.render('help',{
         title:'Help Page',
-        context:'Any help required related to this site, please close your browser!',
+        context:'Refer below repos for this page creation',
         name: 'Prasath DV',
         author:'Andrew Mead'
     })

@@ -19,7 +19,7 @@ const weatherCall = (latitude,longitude,callback)=>{
         }else if(body.error){
             callback('Unable to fetch location. Please check your input parms and retry!',undefined)
         }else{
-            callback(undefined,'Current weather is ' + body.current.temperature + ' degrees with '+ body.current.precip + '% chance for rain. Weather outside is currently '+body.current.weather_descriptions[0] + '. Thank you!')
+            callback(undefined,'Current temperature outside is ' + body.current.temperature + ' degrees with '+ body.current.precip + '% chance for rain. Weather is '+body.current.weather_descriptions[0] + ' as observed at ' + body.current.observation_time+'. Thank you!')
         }
     })
 
