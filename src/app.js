@@ -64,7 +64,7 @@ app.get('/weather',(req,res)=>{
     const address = req.query.address
     if(!address){
         return res.send(
-            {error:'Please enter required address key in query parameter in URL'}
+            {error:'Please enter required address for search'}
             )
     }else{
         geoCodeTranslate(address,(error,{latitude,longitude,location}={})=>{
