@@ -44,7 +44,7 @@ app.get('',(req,res)=>{
 app.get('/about',(req,res)=>{
     res.render('about',{
         title:'About Page',
-        context:'This page provides profile info about creator',
+        context:'This site is created by Prasath DV under guidance by Andrew Mead (Udemy). This site uses mapbox.com and weatherstack.com API`s to extract required weather information.',
         name: 'Prasath DV',
         author:'Andrew Mead'
     })
