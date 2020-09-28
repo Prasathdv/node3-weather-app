@@ -12,7 +12,7 @@ formInput.addEventListener('submit',(e)=>{
     messageOne.textContent = 'Loading....'
     messageTwo.textContent = ''
     // fetch weather data from the /weather url and dump it into client side console using fetch function(js fucntion)
-        const weatherUrl = 'http://localhost:3000/weather?address='+ location
+        const weatherUrl = '/weather?address='+ location
         fetch(weatherUrl).then((response)=>{
             
             response.json().then((data)=>{

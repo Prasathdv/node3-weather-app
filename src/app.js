@@ -14,6 +14,10 @@ const weatherCall = require('./utils/weathercall.js')
 
 // Start the web server
 const app = express()
+
+// Set up Heroku`s port or localhost port
+const port = process.env.PORT || 3000
+
 // Define paths for express configuration
 const homePagePath = path.join(__dirname,'../public')
 const viewsPath = path.join(__dirname,'../templates/views')
@@ -83,14 +87,7 @@ app.get('/weather',(req,res)=>{
 
     }
                 
-//     // Display the query string in the response json
-//     res.send({
-//         address:address,
-//         location:location,
-//         result:weatherData
 
-//     }
-// )
 })
 // help 404 page
 app.get('/help/*',(req,res)=>{
@@ -113,6 +110,6 @@ app.get('*',(req,res)=>{
 })
 
 // Listening webserver in dev port 3000
-app.listen(3000,()=>{
-    console.log('Server is now up on 3000');
+app.listen(port,()=>{
+    console.log('Server is now up on '+ port);
 })
